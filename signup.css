@@ -1,0 +1,436 @@
+/* Base styles from signin.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+/* Reuse container styles but rename for signup */
+.signup-container {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-box {
+    padding: 24px;
+    border: 1px solid #dadce0;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-height: 340px;
+}
+
+.signup-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    min-height: 50px;
+}
+
+/* Add new styles specific to signup */
+.name-section, .password-section {
+    display: flex;
+    gap: 16px;
+    width: 85%;
+    margin: 0 auto 24px;  /* Increased bottom margin */
+}
+
+.name-section {
+    display: flex;
+    gap: 48px; /* Increased from 32px for more space between fields */
+    width: 85%;
+    margin: 0 auto 24px;
+}
+
+.input-container.half {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    width: calc(50% - 24px); /* Adjusted to account for new gap */
+}
+
+.input-container {
+    width: 65%;  /* Reduced from 85% */
+    margin: 0 auto 24px;
+    position: relative;
+}
+
+/* Add specific styling for username input */
+.input-container.username {
+    width: 85%;  /* Increased width from 50% */
+    margin: 0;
+    padding-left: 40px; /* Reduced padding to move left */
+    padding-bottom: 24px;
+    position: relative;
+}
+
+/* Adjust wrapper for username to move left */
+.username-wrapper {
+    text-align: left;
+    width: 85%;
+    padding-left: 0;  /* Removed padding to align more left */
+    margin-left: -35px; /* Negative margin to pull left */
+}
+
+.input-container.username .helper-text {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.password-section {
+    display: flex;
+    gap: 48px; /* Increased from 16px to match name-section spacing */
+    width: 85%;
+    margin: 24px auto 8px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+    min-height: auto;
+}
+
+.helper-text {
+    color: #5f6368;
+    font-size: 12px;
+    margin-top: 4px;
+    margin-bottom: 24px;  /* Added bottom margin */
+    margin-left: 8px;
+}
+
+.email-suffix {
+    position: absolute;
+    right: -70px;
+    top: 25%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    color: #5f6368;
+    font-size: 18px; /* Increased from 14px */
+    pointer-events: none;
+    margin: 0;
+    z-index: 1;
+    background: transparent;
+    padding: 8px 0;
+}
+
+input[type="text"]#username {
+    padding-right: 100px; /* Increased padding to make room for @gmail.com */
+}
+
+.signin-link {
+    color: #1a73e8;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Inherit rest of the styles from signin.css */
+.signin-container {
+    width: 100%;
+    max-width: 1050px; /* Increased from 950px */
+    min-height: 350px; /* Reduced from 400px */
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-box {
+    padding: 24px; /* Reduced from 28px */
+    border: 1px solid #dadce0;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-height: 340px; /* Reduced from 380px */
+}
+
+.signin-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    min-height: 50px; /* Reduced from 60px */
+}
+
+.left-section {
+    padding-right: 60px; /* Increased from 48px for more width */
+    flex-basis: 40%; /* Increased from 35% */
+}
+
+.right-section {
+    padding-left: 60px; /* Increased from 48px for more width */
+    flex-basis: 60%; /* Reduced from 65% */
+    display: flex;
+    flex-direction: column;
+    min-height: 380px; /* Increased height */
+}
+
+.right-section form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 360px; /* Increased height */
+}
+
+.form-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    position: relative; /* Added for absolute positioning */
+    min-height: 320px; /* Increased height */
+    padding-top: 40px;  /* Increased top padding */
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+    min-height: auto;
+}
+
+.input-section {
+    margin-top: 40px; /* Changed from auto to fixed value */
+    margin-bottom: 0;  /* Changed from auto to 0 */
+    flex-shrink: 0;
+}
+
+.google-icon {
+    margin-bottom: 24px;
+    width: 150px; /* Increased from 100px */
+    height: 68px; /* Increased proportionally from 32px */
+}
+
+.logo-container {
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-family: 'Google Sans', Arial, sans-serif;
+    font-size: 32px; /* Increased from 24px */
+    font-weight: 400;
+    margin: 0 0 16px; /* Increased bottom margin from 12px */
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    color: #202124;
+    padding-right: 24px;
+}
+
+.input-container {
+    width: 70%;  /* Reduced from 85% */
+    margin: 0 auto 24px;
+    text-align: left; /* Changed from right to left */
+    position: relative;
+}
+
+/* Add specific styling for username input */
+.input-container.username {
+    width: 85%;  /* Increased width from 50% */
+    margin-left: 7.5%; /* Set specific left margin */
+    margin-right: auto;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 15px; /* Reduced padding from 12px to 10px */
+    height: 42px; /* Reduced height from 48px to 42px */
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #202124;
+    transition: border 0.2s;
+}
+
+input:focus {
+    border: 2px solid #1a73e8;
+    outline: none;
+}
+
+label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #5f6368;
+    transition: 0.2s ease all;
+    pointer-events: none;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: 5px; /* Adjusted from 6px for smaller input */
+    font-size: 12px;
+    color: #1a73e8;
+    background: #fff;
+    padding: 0 4px;
+}
+
+.forgot-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #1a73e8;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+    padding-left: 8px; /* Changed from right to left padding */
+}
+
+.info-text {
+    width: 85%;
+    position: relative; /* Changed from absolute positioning */
+    margin: 40px auto 60px; /* Added margins to position it */
+    text-align: left;
+    font-size: 14px;
+    color: #5f6368;
+    line-height: 1.5;
+    padding-left: 14px;
+    transform: none; /* Remove transform */
+    left: auto; /* Remove left positioning */
+    bottom: auto; /* Remove bottom positioning */
+}
+
+.info-text p {
+    display: inline; /* Make paragraph inline to appear in one line with link */
+    margin-right: 6px; /* Add spacing before the link */
+}
+
+.info-text a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline; /* Keep link on same line */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Changed from space-between to flex-end */
+    align-items: center;
+    width: 100%;
+    gap: 16px; /* Added gap for spacing between buttons */
+    margin-top: auto; /* Changed to push to bottom */
+    padding-top: 20px; /* Added padding */
+}
+
+.create-link {
+    color: #1a73e8;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+    /* Removed any margins that might push it away */
+}
+
+.next-button {
+    background: #1a73e8;
+    color: white;
+    border: none;
+    padding: 0 24px;
+    height: 36px;
+    border-radius: 20px;
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.next-button:hover {
+    background: #1557b0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.footer {
+    margin-top: 24px; /* Reduced from 32px */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+}
+
+.language-select select {
+    padding: 8px 24px 8px 8px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    color: #202124;
+    font-size: 14px;
+    background: transparent;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: #5f6368;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .signin-box {
+        padding: 24px;
+    }
+    
+    .signin-content {
+        flex-direction: column;
+    }
+    
+    .left-section {
+        padding-right: 0;
+        padding-bottom: 32px;
+        border-right: none;
+        border-bottom: 1px solid #dadce0;
+        margin-bottom: 32px;
+        flex-basis: auto;
+        width: 100%;
+    }
+    
+    .right-section {
+        padding-left: 0;
+        flex-basis: auto;
+        width: 100%;
+    }
+}
+
+/* Media query adjustments */
+@media (max-width: 768px) {
+    .name-section, 
+    .password-section {
+        flex-direction: column;
+        gap: 24px; /* Consistent spacing for both sections on mobile */
+    }
+    
+    .input-container.half {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    
+    .input-container {
+        margin-bottom: 16px;
+    }
+
+    .email-suffix {
+        position: relative;
+        left: 8px;
+        top: -4px;
+        transform: none;
+    }
+
+    .name-section {
+        gap: 24px; /* Reduced gap on mobile but still maintain good spacing */
+    }
+}
